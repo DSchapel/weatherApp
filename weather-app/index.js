@@ -57,7 +57,7 @@ function displayWeatherInfo(data){
     cityDisplay.textContent= city;
     cityDisplay.classList.add("cityDisplay");
 
-    //convert celsius to fahrenheit
+    //convert Kalvin to Fahrenheit
     const fahrenheitTemp = Math.floor((temp-273.15)*(9/5) + 32);
 
     //add temperature to the temp display's text content then assign it the class so CSS will recognize it and format
