@@ -2,7 +2,7 @@ const weatherForm = document.querySelector(".weatherForm");
 const cityInput = document.querySelector(".cityInput");
 const card = document.querySelector(".card");
 
-const apiKey = "f0d15a63c396c6d64872e910fb5c9e03";
+const apiKey = import.meta.env.VITE_API_KEY;
 
 weatherForm.addEventListener("submit", async event=>{
     event.preventDefault();
@@ -49,7 +49,7 @@ function displayWeatherInfo(data){
     cityDisplay.textContent= city;
     cityDisplay.classList.add("cityDisplay");
 
-    fahrenheitTemp = Math.floor((temp-273.15)*(9/5) + 32);
+    const fahrenheitTemp = Math.floor((temp-273.15)*(9/5) + 32);
 
     tempDisplay.textContent = `${fahrenheitTemp}°`;
     tempDisplay.classList.add("tempDisplay");
